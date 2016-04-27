@@ -1,20 +1,8 @@
 #instance vs class variable
 #class methods
-class Person:
-	people_count = 0
-	def __init__(self, name, age=0):
-		self.name = name
-		if age!=0:
-			self.age = age
-		Person.people_count += 1
+from person import Person	
+from kenyan import Kenyan 
 
-	def __repr__(self):
-		return "<object: {}, {}>".format(self.name, self.age)
-	def say_hello(self):
-		return "Hello, I'm {} age and {} y/o".format(self.name, self.age)
-
-
-		
 p1 = Person('Joe', 23)
 p2 = Person('Jane', 23)
 p3 = Person('George', 35)
@@ -28,4 +16,9 @@ for name, age in a:
 	person = Person(name, age)
 	b.append(person)
 print b
+
+k = Kenyan('Anne Waiguru',50)
+k.probe(True)
+print "Is {}, corrupt? {}".format(k.name, k.is_corrupt())
+print k.say_hello()
 
