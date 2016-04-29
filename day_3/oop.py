@@ -1,13 +1,14 @@
 # instance vs class variable
 # class methods
 from person import Person
-from kenyan import Kenyan
+#from kenyan import Kenyan
 
 p1 = Person('Joe', 23)
 p2 = Person('Jane', 23)
 p3 = Person('George', 35)
 print p3.say_hello()
 print p2.people_count
+print p2.name
 print Person.people_count
 
 b = []
